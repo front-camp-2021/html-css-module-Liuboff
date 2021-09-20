@@ -1,12 +1,3 @@
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;
-    400;
-    600&display=swap);
-    * {
-    font-family: Montserrat, sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 .cards {
     padding-top: 28px;
     display: flex;
@@ -27,8 +18,13 @@
     flex-direction: column;
     align-items: center;
 }
-.cards .card__img {
-    max-width: 60%}
+.cards .card__wrapper .card__img-wrapper {
+    height: 280px;
+}
+.cards .card__wrapper .card__img-wrapper .card__img {
+    width: 100%;
+    height: 100%;
+}
 .cards .card__rate-price {
     padding-top: 34px;
     width: 100%;
@@ -50,12 +46,18 @@
     line-height: 21px;
     padding: 10px;
 }
+.cards .card__rate-price .rating span::after {
+    content: ' \2606';
+}
 .cards .card__rate-price .price {
     padding: 5px;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
     color: #2c2c2c;
+}
+.cards .card__rate-price .price span::before {
+    content: '$';
 }
 .cards .card__title {
     padding-top: 25px;
@@ -64,7 +66,8 @@
     line-height: 19px;
     color: #2c2c2c;
     text-align: left;
-    width: 100%}
+    width: 100%;
+}
 .cards .card__descr {
     padding-top: 3px;
     font-weight: 300;
@@ -72,7 +75,8 @@
     line-height: 14px;
     color: #2c2c2c;
     text-align: left;
-    width: 100%}
+    width: 100%;
+}
 .cards .card__buttons {
     padding-top: 22px;
     width: 100%;
